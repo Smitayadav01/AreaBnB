@@ -26,7 +26,7 @@ body{
 .f-info-links a{
     text-decoration: none;
     color: #222222;
-    vertical-align: m;
+    vertical-align:middle;
 }
 .f-info-links a:hover{
     text-decoration: underline;
@@ -90,4 +90,22 @@ body{
 .add-btn{
     background-color: #fe424d !important;
     border: none !important;
+}
+
+.edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+} 
+
+.show-img{
+    height: 40vh;
+}
+
+.btns{
+    display: flex;
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
 }
