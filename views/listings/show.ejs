@@ -13,18 +13,17 @@
         <div class="card show-card col-6 offset-3 listing-card">
           <img src="<%= listing.image || '/images/default.jpg' %>" class="card-img-top show-img" alt="listing_image">
           <div class="card-body">
-            <p class="card-text">
-              
-              <%= listing.description %> <br>
-              &#8377;<%= listing.price ? listing.price.toLocaleString('en-IN') : 'N/A' %>/night <br>
-              <%= listing.location %> <br>
-              <%= listing.country %> <br>
-            </p>
+            <p class="card-text">Owned by <i><%= listing.owner.username %> </i></p>
+             <p> <%= listing.description %></p>
+             <p> &#8377;<%= listing.price ? listing.price.toLocaleString('en-IN') : 'N/A' %>/night </p>
+              <p><%= listing.location %> </p>
+             <p> <%= listing.country %> </p>
           </div>
         </div>
       </div>
     </div>
 
+    
     <div class="text-center mt-4">
       <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark me-3">Edit</a>
 
@@ -34,6 +33,7 @@
       
       <hr/>
     </div>
+   
 
 
     <div class="col-8 offset-2 mb-3">
@@ -60,7 +60,7 @@
       <% for(review of listing.reviews) { %>
         <div class="card col-5 ms-3 mb-3">
           <div class="card-body">
-            <h5 class="card-title">Smita Yadav</h5>
+            <h5 class="card-title">@<%= review.author.username %></h5>
             <p class="card-text"> <%= review.comment %> </p>
             <p class="card-text"> <%= review.rating %> stars </p>
           </div>
